@@ -1,11 +1,15 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/hw">hw</router-link>
+      <router-link to="/">Home</router-link>|
+      <router-link to="/about">About</router-link>|
+      <router-link to="/hw">hw</router-link>|
+      <!-- :to === v-bind -->
+      <router-link :to="{name:'hw'}">hellowWorld</router-link>
     </div>
-    <router-view/>
+    <router-view />
+    <router-view name="email" />
+    <router-view name="tel" />
   </div>
 </template>
 
