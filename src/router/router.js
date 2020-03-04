@@ -5,7 +5,10 @@ export default [
     path: '/',
     alias: '/home_page',
     name: 'Home',
-    component: Home
+    component: Home,
+    props: route => ({
+      food: route.query.food
+    })
   },
   {
     path: '/about',
@@ -13,18 +16,36 @@ export default [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    props: {
+      food: 'banan'
+    }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/login.vue'),
+    meta:{
+      title:'登录'
+    }
   },
   {
     path: '/hw',
     name: 'hw',
-    component: () => import('../components/HelloWorld.vue')
+    component: () => import('../components/HelloWorld.vue'),
+    beforeEnter: (to, from, next) => {
+      // ...
+      // console.log(to.name)
+      // console.log(from.name)
+      next()
+    }
   },
   {
     // :name 可以通过$router.param.name获取
     path: '/argu/:name',
     name: 'argu',
-    component: () => import('@/views/argu.vue')
+    component: () => import('@/views/argu.vue'),
+    props: true
   },
   {
     path: '/parent',
@@ -56,5 +77,9 @@ export default [
     //     name:'Home'
     //   }
     // }
+  },
+  {
+    path: '*',
+    component: () => import('@/views/error.vue')
   }
 ]
