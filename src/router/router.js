@@ -25,8 +25,8 @@ export default [
     path: '/login',
     name: 'login',
     component: () => import('@/views/login.vue'),
-    meta:{
-      title:'登录'
+    meta: {
+      title: '登录'
     }
   },
   {
@@ -79,9 +79,14 @@ export default [
     // }
   },
   {
-    path:'/store',
-    name:'store',
-    component:()=>import('@/views/store.vue')
+    path: '/store',
+    name: 'store',
+    component: () => import('@/views/store.vue')
+  },
+  {
+    path: '/tel',
+    name: 'tel',
+    component: () => import('@/views/tel.vue')
   },
   {
     path: '*',

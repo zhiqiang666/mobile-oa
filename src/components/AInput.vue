@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>I am child Component</h3>
     <input @input="handleInput" :value="value" ref="inputValue"/>
     <button @click="handleClick">往上传</button>
   </div>
