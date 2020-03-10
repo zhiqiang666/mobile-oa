@@ -89,6 +89,11 @@ export default [
     component: () => import('@/views/tel.vue')
   },
   {
+    path:'/storeT',
+    name:'storeT',
+    component:()=>import('@/views/storeT.vue')
+  },
+  {
     path: '*',
     component: () => import('@/views/error.vue')
   }

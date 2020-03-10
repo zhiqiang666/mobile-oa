@@ -1,3 +1,5 @@
 1、子传父 $emit绑定到父，然后接收显示
 2、父传子 使用v-bind方法在compent注册后放在子组件使用，子组件通过props接收
 3、兄弟组件 Bus 全局定义一个bus然后通过emit去绑定共享,原理与共享同父组件使用媒介传值
+4、vuex中使用state存储状态、数据，在getters中去改变state里面的内容，在component中computed计算属性去使用状态管理中的值,...mapGetters('module',[]) or stateValue(){};
+5、vuex中使用mutations通过commit去修改state中的值
