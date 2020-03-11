@@ -3,3 +3,7 @@
 3、兄弟组件 Bus 全局定义一个bus然后通过emit去绑定共享,原理与共享同父组件使用媒介传值
 4、vuex中使用state存储状态、数据，在getters中去改变state里面的内容，在component中computed计算属性去使用状态管理中的值,...mapGetters('module',[]) or stateValue(){};
 5、vuex中使用mutations通过commit去修改state中的值
+6、vuex中使用action配合api发请求调用mutations中的方法去修改state中的值
+7、存储state插件机制，也就是利用localStorage进行state值存储
+8、store的严格模式，开发环境下使用，避免不必要的报错
+9、vuex的双向数据绑定通过对input绑定@input事件和：value去修改state，然后再绑定的@input事件中去提交mutations去修改state，第二种方法将input绑定v-model在计算属性中设置get获取state,set中提交mutations修改state

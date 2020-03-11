@@ -5,6 +5,9 @@ const mutations = {
   },
   setApp(state) {
     vue.set(state, 'appVersion', 'V2.0')
+  },
+  setStateValue(state, value) {
+    state.stateValue = value
   }
 }
 export default mutations

@@ -1,3 +1,4 @@
+import { getUsername } from '@/api/app'
 const state = {
   userName: "susan"
 }
@@ -12,7 +13,17 @@ const mutations = {
   }
 }
 const actions = {
+  async updateUserName({ commit }) {
+    const {info:{newName}} = await getUsername()
+    commit('SET_USER_NAME',newName)
+  },
+  updateUserNames({ commit, state, rootState }) {
+    //根模块
+    dispatch('setName', '')
+  },
+  setName() {
 
+  }
 }
 export default {
   namespaced: true,
