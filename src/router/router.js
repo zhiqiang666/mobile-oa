@@ -94,6 +94,10 @@ export default [
     component:()=>import('@/views/storeT.vue')
   },
   {
+    path:'/axios',
+    component:()=>import('@/views/axios.vue')
+  },
+  {
     path: '*',
     component: () => import('@/views/error.vue')
   }
