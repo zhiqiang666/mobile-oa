@@ -1,1 +1,1 @@
-export const baseUrl = process.env.NODE_ENV === 'production' ? 'http://production.com' : ''
+export const baseURL = process.env.NODE_ENV === 'production' ? 'http://production.com' : ''
